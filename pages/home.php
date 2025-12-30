@@ -1,14 +1,13 @@
 <?php
 //search dan tampilkan produuk
 $keyword = $_GET['cari'] ?? null;
-if($keyword){
+if ($keyword) {
     $safe_keyword = mysqli_real_escape_string($conn, $keyword);
     $sql = "select * from produk where nama_produk like '%$safe_keyword%' order by id_produk desc";
 } else {
     $sql = 'select*from produk order by id_produk desc';
-
 }
-$query= mysqli_query($conn, $sql);
+$query = mysqli_query($conn, $sql);
 //hitungtotal
 $totalProduk = mysqli_num_rows($query);
 ?>
