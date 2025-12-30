@@ -13,4 +13,4 @@
 
 <body>
     <div class="app">
-        <div class="header">GONDRONG MART</div>
+        <div class="header"><a href="<?= url('home') ?>">GONDRONG MART</a></div>
